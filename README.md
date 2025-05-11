@@ -24,9 +24,17 @@ A simple FastAPI-based REST API for generating text using local [Ollama](https:/
 Clone the repository and install dependencies:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/General-Sandwalker/fastllm-api.git
 cd fastllm-api
 pip install -r 
+```
+
+### or
+
+```bash
+git clone https://github.com/General-Sandwalker/fastllm-api.git
+cd fastllm-api
+docker build -t fastllm-api . && docker run -p 8000:8000 fastllm-api
 ```
 
 ---
