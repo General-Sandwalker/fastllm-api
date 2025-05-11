@@ -1,43 +1,38 @@
-# Lab 4 - LLM Access with FastAPI / Ollama and Machine Learning
+# FastLLM API
 
-This assignment demonstrates how to access Large Language Models (LLMs) using FastAPI and Ollama, and introduces basic machine learning concepts.
+A simple FastAPI-based REST API for generating text using local [Ollama](https://ollama.com/) models, such as `deepseek-r1:1.5b`.
 
-## Objectives
+---
 
-- Build a FastAPI server to interact with LLMs (e.g., via Ollama).
-- Send prompts to the LLM and receive responses.
-- Integrate simple machine learning tasks (e.g., text classification or sentiment analysis).
+## Features
 
-## Requirements
+- Exposes a `/generate` endpoint for text generation.
+- Easily configurable to use any Ollama-supported model.
+- Designed for local development and integration with tools like Insomnia.
 
-- Python 3.8+
-- FastAPI
-- Ollama (or another LLM backend)
-- Uvicorn
-- (Optional) scikit-learn, numpy, pandas
+---
 
-## Getting Started
+## Usage
 
-1. Clone the repository or copy the assignment files.
-2. Install dependencies:
-    ```
-    pip install fastapi uvicorn requests
-    ```
-    (Add other ML libraries as needed.)
+### 1. Prerequisites
 
-3. Start the FastAPI server:
-    ```
-    uvicorn main:app --reload
-    ```
+- Python 3.13+
+- [Ollama](https://ollama.com/) running locally with your desired model pulled (e.g., `ollama pull deepseek-r1:1.5b`).
 
-4. Use the provided endpoints to interact with the LLM and ML models.
+### 2. Installation
 
-## Example Endpoints
+Clone the repository and install dependencies:
 
-- `/generate`: Send a prompt to the LLM and get a response.
-- `/classify`: Submit text for machine learning classification.
+```bash
+git clone <your-repo-url>
+cd fastllm-api
+pip install -r 
+```
 
-## Notes
+---
 
-- Ensure Ollama or your chosen LLM backend is running and accessible.
-- Modify and extend the code as needed for your assignment requirements.
+## Example API Test
+
+Below is a screenshot showing an example API test using the `/generate` endpoint:
+
+![API Test Screenshot](resources/api-test-screenshot.png)
